@@ -13,7 +13,7 @@ export default function Signup() {
   const handleSubmit = (e) => {
     e.preventDefault()
 
-
+    console.log(email,password, displayName)
   }
 
   return (
@@ -31,7 +31,7 @@ export default function Signup() {
       <label>
         <span>Password</span>
         <input 
-          type="email"
+          type="password"
           onChange={(e) => setPassword(e.target.value) } 
           value={password}
         />
@@ -40,9 +40,9 @@ export default function Signup() {
       <label>
         <span>Display Name:</span>
         <input 
-          type="email"
+          type="text"
           onChange={(e) => setDisplayName(e.target.value) } 
-          value={password}
+          value={displayName}
         />
       </label>
 
