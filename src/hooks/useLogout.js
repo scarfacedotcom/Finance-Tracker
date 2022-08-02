@@ -19,6 +19,9 @@ const useLogout = () => {
       // dispatch logout action
       dispatch({ type: 'LOGOUT' })
 
+      setError(null)
+      setIsPending(false)
+
     }
     catch(err) {
       console.log(err.message)
