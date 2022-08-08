@@ -6,8 +6,20 @@ export default function TransactionForm() {
   const [amount, setAmount] = useState('')
 
   return (
-    <div>
+    <>
+      <h3>Add a Transaction </h3>
+      <form>
+        <label>
+          <span>Transaction name:</span>
+          <input 
+            type="text"
+            required
+            onChange={(e) => setName(e.target.value) }
+            value={name}
+          />
+        </label>
+      </form>
       
-    </div>
+    </>
   )
 }
