@@ -19,7 +19,7 @@ export default function TransactionForm() {
       <h3>Add a Transaction </h3>
       <form onSubmit={handleSubmit}>
         <label>
-          <span>Transaction name:</span>
+          <span>Transaction Name:</span>
           <input 
             type="text"
             required
