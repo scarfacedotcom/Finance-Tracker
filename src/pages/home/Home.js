@@ -1,6 +1,10 @@
 import styles from './Home.module.css'
 
 
+//components
+import TransactionForm from './TransactionForm'
+
+
 export default function Home() {
   return (
     <div className={styles.container} >
@@ -8,7 +12,7 @@ export default function Home() {
         transaction List
       </div>
       <div className={styles.sidebar}>
-
+        <TransactionForm />
       </div>
     </div>
   )

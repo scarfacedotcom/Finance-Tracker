@@ -42,6 +42,12 @@
   display: block;
   width: 100%;
 }
+
+.sidebar button:hover {
+  color: #1f9751;
+  background-color: #ffff;
+}
+
 .sidebar h3 {
   color: #1f9751;
   margin-bottom: 20px;
