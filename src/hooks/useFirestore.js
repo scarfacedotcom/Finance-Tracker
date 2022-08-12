@@ -32,4 +32,10 @@ export const useFirestore = (collection) => {
   const deleteDocument = (id) => {
 
   }
+
+  useEffect(() => {
+    return () => setIsCancelled(true)
+  }, [])
+
+  return {addDocument, deleteDocument, response}
 }
