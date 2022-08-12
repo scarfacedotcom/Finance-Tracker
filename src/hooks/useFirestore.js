@@ -10,6 +10,8 @@ let initialState = {
 
 const firestoreReducer = (state, action) => {
   switch (action.type) {
+    case 'IS_PENDING':
+      return {...state, isPending: true}
 
     default:
       return state
@@ -23,13 +25,30 @@ export const useFirestore = (collection) => {
   //colletion ref
   const ref = projectFireStore.collection(collection)
 
-  //add a document
-  const addDocument = (doc) => {
+  // only dispatch if not cancelled
 
+  const dispatchIsNotCancelled = (action) => {
+    if (!isCancelled) {
+      dispatch(action)
+    }
+  }
+
+  //add a document
+  const addDocument = async (doc) => {
+    dispatch({type: 'IS_PENDING'})
+
+    try {
+      const addedDocument = await ref.add(doc)
+
+      dispatchIsNotCancelled({ type: 'ADDED_DOCUMENT', payload: addedDocument})
+    }
+    catch(err) {
+
+    }
   }
 
   //delete a document
-  const deleteDocument = (id) => {
+  const deleteDocument = async (id) => {
 
   }
 
