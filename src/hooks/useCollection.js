@@ -25,7 +25,9 @@ export const useCollection = (collection) => {
     })
 
     return () => unsub()
-    
+
   }, [collection])
+
+  return {documents, error}
 
 }
