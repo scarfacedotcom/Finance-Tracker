@@ -10,7 +10,7 @@ export default function TransactionForm() {
   const handleSubmit = (e) => {
     e.preventDefault()
 
-    console.log({
+    addDocument({
       name,
       amount
     })
