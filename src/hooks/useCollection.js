@@ -18,10 +18,14 @@ export const useCollection = (collection) => {
 
     setDocuments(results)
     setError(null)
-    
+
+    }, (error) => {
+      console.log(error)
+      setError('could not fetch the data')
     })
 
-
+    return () => unsub()
+    
   }, [collection])
 
 }
