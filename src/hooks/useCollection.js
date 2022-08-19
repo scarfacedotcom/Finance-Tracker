@@ -9,7 +9,11 @@ export const useCollection = (collection) => {
   useEffect(() => {
     let ref = projectFireStore.collection(collection)
 
-    const unsub = ref.onSnapshot((snapshot) => {
+    if (query) {
+      ref = ref.where(query)
+    }
+
+    const unsubscribe = ref.onSnapshot((snapshot) => {
       let results = []
 
       snapshot.docs.forEach(doc => {
@@ -24,7 +28,7 @@ export const useCollection = (collection) => {
       setError('could not fetch the data')
     })
 
-    return () => unsub()
+    return () => unsubscribe()
 
   }, [collection])
 
