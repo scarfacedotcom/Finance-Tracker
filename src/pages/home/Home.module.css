@@ -12,7 +12,7 @@
 }
 .sidebar form {
   padding: 20px;
-  background: #1f9751;
+  background: #3610de;
   border-radius: 10px;
 }
 .sidebar input, .sidebar select {
@@ -22,7 +22,7 @@
   margin-top: 8px;
   box-sizing: border-box;
   border: 0;
-  border-radius: 4px;
+  border-radius: 5px;
   color: #555;
   font-size: 1em;
 }
@@ -44,17 +44,17 @@
 }
 
 .sidebar button:hover {
-  color: #1f9751;
+  color: #3610de;
   background-color: #ffff;
 }
 
 .sidebar h3 {
-  color: #1f9751;
+  color: #3610de;
   margin-bottom: 20px;
 }
 .sidebar aside {
   margin-top: 40px;
-  color: #555;
+  color: #3610de;
 }
 .sidebar aside li {
   margin: 10px;
@@ -64,35 +64,46 @@
 .transactions li {
   margin: 30px auto;
   border: 1px solid #f2f2f2;
-  box-shadow: 3px 3px 5px rgba(50,50,50,0.1);
+  /* box-shadow: 3px 3px 5px rgba(50,50,50,0.1); */
+  box-shadow: 3px 3px 5px rgba(96, 81, 211, 0.1);
   padding: 20px;
   display: flex;
   align-items: center;
   position: relative;
   overflow: hidden;
-  border-left: 4px solid #1f9751;
+  border-left: 4px solid #3610de;
+  border-radius: 20px;
 }
 .transactions .name {
-  color: rgb(201, 24, 24);
+  color: rgb#3610de;
   font-size: 1.4em;
 }
 .transactions .amount {
   margin-left: auto;
   margin-right: 40px;
-  color: rgb(201, 24, 24);
+  color: rgb#3610de;
   font-weight: bold;
   font-size: 1.6em;
 }
 .transactions button {
-  position: absolute;
+  /* position: absolute; */
+  border-radius: 15px;
   top: 0;
   right:0;
-  background: #ddd;
-  color: #777;
+  background: #3610de;
+  color: #ffffff;
   border: none;
   padding: 12px 8px;
   text-align: center;
   line-height: 0;
   font-size: 0.9em;
+  cursor: pointer;
+}
+
+.transactions button:hover {
+  background: #3610de;
+  color: #ffffff;
+  text-align: center;
+  font-size: 1.1em;
   cursor: pointer;
 }
